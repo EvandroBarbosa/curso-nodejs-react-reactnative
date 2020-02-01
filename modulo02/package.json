@@ -1,0 +1,14 @@
+{
+  "name": "modulo02",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev" : "nodemon src/server.js"
+  },
+  "repository": "https://github.com/EvandroBarbosa/curso-nodejs-react-reactnative.git",
+  "author": "Evandro Barbora",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
