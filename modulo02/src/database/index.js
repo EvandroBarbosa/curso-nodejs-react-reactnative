@@ -24,14 +24,11 @@ class Database {
   }
 
   mongo() {
-    this.mongooseConect = mongoose.connect(
-      'mongodb://localhost:27017/gobarber',
-      {
-        useFindAndModify: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }
-    );
+    this.mongooseConect = mongoose.connect(process.env.MONGO_URL, {
+      useFindAndModify: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
   }
 }
 
