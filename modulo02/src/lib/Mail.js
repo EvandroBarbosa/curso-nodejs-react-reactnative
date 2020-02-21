@@ -4,6 +4,7 @@ import exphbs from 'express-handlebars';
 import nodemailerhbs from 'nodemailer-express-handlebars';
 import mailConfig from '../config/mail';
 
+/* Configurações para o envio de emails */
 class Mail {
   constructor() {
     const { host, port, secure, auth } = mailConfig;

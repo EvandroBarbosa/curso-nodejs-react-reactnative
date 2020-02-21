@@ -1,7 +1,11 @@
+// Carrega o model user
 import User from '../models/User';
+
+// Carrega schema de notificações, esse usa-se o mongoDB
 import Notification from '../schema/Notification';
 
 class NotificationController {
+  // Cria consulta de notificações do provedor
   async index(req, res) {
     // Check if user is a provider
     const checkIsProvider = await User.findOne({
@@ -22,7 +26,7 @@ class NotificationController {
     return res.json(notifications);
   }
 
-  // Update
+  // Atualiza as notificações como sendo visualizada
   async update(req, res) {
     const notification = await Notification.findByIdAndUpdate(
       req.params.id,

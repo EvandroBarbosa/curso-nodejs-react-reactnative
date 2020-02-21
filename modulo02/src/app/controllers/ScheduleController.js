@@ -1,10 +1,14 @@
+// Carrega o modulo de configurações de datas
 import { startOfDay, endOfDay, parseISO } from 'date-fns';
 import { Op } from 'sequelize';
 
+// Carrega os models utilizado nesse controller
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 
 class ScheduleController {
+  // Cria consulta da agenda do provedor
+  // para ele verificar o que ele tem de serviços solicitados
   async index(req, res) {
     const checkUserProvider = await User.findOne({
       where: { id: req.userId, provider: true },

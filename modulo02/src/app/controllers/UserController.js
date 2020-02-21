@@ -1,7 +1,11 @@
+// Carrega o modulo do YUP para validaçoes
 import * as Yup from 'yup';
+
+// Carrega o model user para criação de usuarios
 import User from '../models/User';
 
 class UserController {
+  // Cria um perfil para o usuário na aplicação
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
@@ -29,6 +33,7 @@ class UserController {
     return res.status(201).json({ id, name, email, provider });
   }
 
+  // Atualiza o perfil do usuário
   async update(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string(),

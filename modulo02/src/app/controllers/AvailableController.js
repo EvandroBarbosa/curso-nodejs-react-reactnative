@@ -1,3 +1,4 @@
+// Carrega o modulo para configurações de datas
 import {
   startOfDay,
   endOfDay,
@@ -7,10 +8,15 @@ import {
   format,
   isAfter,
 } from 'date-fns';
+
+// Desetrutura a função Op do sequelize para operações no banco de dado
 import { Op } from 'sequelize';
+
+// Carrega o model utilizado nesse controller
 import Appointment from '../models/Appointment';
 
 class AvailableController {
+  // Criar consulta para verificar os horários do provedor de serviço estão disponivel ou se ja estão preenchido
   async index(req, res) {
     const { date } = req.query;
 

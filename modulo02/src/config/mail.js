@@ -1,3 +1,4 @@
+// Objeto usado para o envio de emials
 export default {
   host: process.env.MAIL_HOST,
   port: process.env.MAIL_PORT,

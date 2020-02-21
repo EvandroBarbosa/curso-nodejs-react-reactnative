@@ -9,6 +9,7 @@ import databaseConfig from '../config/database';
 
 const models = [User, File, Appointment];
 
+// Class que criar as conexões com os bancos Postgres e MongoDB
 class Database {
   constructor() {
     this.init();

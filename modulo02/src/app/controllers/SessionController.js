@@ -1,11 +1,17 @@
+// Carrega o modulo do JWT
 import jwt from 'jsonwebtoken';
 
+// Carrega o modulo do YUP para validações
 import * as Yup from 'yup';
+
+// Carrega o model de user
 import User from '../models/User';
 
+// Carrega as configurações de token
 import authConfig from '../../config/auth';
 
 class SessionController {
+  // Cria uma sessão do usuário na aplicação, isso é pra quem ja tem um cadastro
   async store(req, res) {
     const schema = Yup.object().shape({
       email: Yup.string().email(),

@@ -1,17 +1,24 @@
+// Carrega o modulo do Yup para validações
 import * as Yup from 'yup';
+
+// Carrega o modulo para configurações de datas
 import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns';
 import { pt } from 'date-fns/locale/pt';
 
+// Carrega os models utilizado nesse controller
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
 import Notification from '../schema/Notification';
 
+// Carrega o arquivo de configuração de envio de emails
 import CancellationMail from '../jobs/CancellationMail';
 
+// Carrega as configurações de fila
 import Queue from '../../lib/Queue';
 
 class AppointmentsController {
+  // Cria as consulta de agendamento
   async index(req, res) {
     const { page = 1 } = req.query;
 
@@ -39,6 +46,7 @@ class AppointmentsController {
     return res.json(appointment);
   }
 
+  // Cria uma agendamento no banco de dados
   async store(req, res) {
     const schema = Yup.object().shape({
       provider_id: Yup.number().required(),

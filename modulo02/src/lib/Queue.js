@@ -4,6 +4,7 @@ import redisConfig from '../config/redis';
 
 const jobs = [CancellationMail];
 
+/* Configurações para filas na hora do envio de emails */
 class Queue {
   constructor() {
     this.queues = {};

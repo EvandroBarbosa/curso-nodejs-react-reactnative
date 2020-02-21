@@ -3,6 +3,7 @@ import { promisify } from 'util';
 
 import authconfig from '../../config/auth';
 
+/* Cria as configurações para o token da aplicação */
 export default async (req, res, next) => {
   const authHeader = req.headers.authorization;
 
