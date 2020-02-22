@@ -3,6 +3,9 @@
 */
 import React from 'react'
 
+// Importando arquivo CSS
+import './App.css'
+
 function App() {
   return <h1>ErxSoluções!</h1>;
 }
