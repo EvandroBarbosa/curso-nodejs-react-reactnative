@@ -3,14 +3,17 @@
 */
 import React from 'react'
 
-// Importando imagem
-import logo from './assets/logo-erx-p.png'
+// // Importando imagem
+// import logo from './assets/logo-erx-p.png'
+
+// Carregando o componente TechList
+import TechList from './components/TechList'
 
 // Importando arquivo CSS
 import './App.css'
 
 function App() {
-  return <img src={logo} alt="logo"/>;
+  return <TechList />;
 }
 
 export default App;
