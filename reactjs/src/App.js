@@ -3,11 +3,14 @@
 */
 import React from 'react'
 
+// Importando imagem
+import logo from './assets/logo-erx-p.png'
+
 // Importando arquivo CSS
 import './App.css'
 
 function App() {
-  return <h1>ErxSoluções!</h1>;
+  return <img src={logo} alt="logo"/>;
 }
 
 export default App;
