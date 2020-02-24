@@ -8,13 +8,36 @@ class TechList extends Component{
   // Essa propriedade é imutavel 
   state = {
     newTech: '',
-    techs: [
-      'Node.js',
-      'ReactJS',
-      'React Native',
-      'JavaScript',
-    ]
+    techs: []
   };
+
+  /* Ciclo de vida dos components no React, os principais method */
+
+  // Executado assim que o componente aparece em tela
+  componentDidMount() {
+    const techs = localStorage.getItem('techs')
+
+    if(techs) {
+      this.setState({ techs: JSON.parse(techs)})
+    }
+  }
+
+  // Executado sempre que houver alterações nas props ou state
+  // E esse method recebe como paramentro as prevProps e prevState
+  // As propriedades antes da alteração e o estado
+  componentDidUpdate(_, prevState){
+    // this.props this.state
+    if(prevState.techs !== this.state.techs){
+      // Armazenando o conteudo no localstorage do navegador
+      localStorage.setItem('techs', JSON.stringify(this.state.techs))
+    }
+
+  }
+
+  // Executado quando um componente deixa de existir
+  componentWillUnmount(){
+
+  }
 
   // Method que pega o evento do teclado ao digitar no input
   handleInputChange = e => {
