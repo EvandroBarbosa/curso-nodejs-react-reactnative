@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Keyboard, ActivityIndicator } from 'react-native';
 import Api from '../../server/Api';
@@ -23,6 +24,24 @@ export default class Main extends Component {
     users: [],
     loading: false,
   };
+
+  // Recuperando os dados do asyncstorage no reactNative
+  async componentDidMount() {
+    const users = await AsyncStorage.getItem('users');
+
+    if (users) {
+      this.setState({ users: JSON.parse(users) });
+    }
+  }
+
+  // Salvando os dados no asyncstorage do reactNative
+  componentDidUpdate(_, prevState) {
+    const { users } = this.state;
+
+    if (prevState.users !== users) {
+      AsyncStorage.setItem('users', JSON.stringify(users));
+    }
+  }
 
   // Method de adicionar o usuário
   handleAddUser = async () => {
