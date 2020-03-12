@@ -20,5 +20,5 @@ projeto criado em ReactJS.</p>
 
 <li>#Polished -> para trabalhar com algumas propriedades do CSS.</li>
 </ul>
-<img src="../src/assets/images/" alt="Template do projeto" />
+<img src="/src/assets/images/" alt="Template do projeto" />
 </html>
