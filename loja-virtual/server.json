@@ -1,0 +1,66 @@
+{
+  "stock": [
+    {
+      "id":1,
+      "amount": 15
+    },
+    {
+      "id":2,
+      "amount": 5
+    },
+    {
+      "id":3,
+      "amount": 30
+    },
+    {
+      "id": 4,
+      "amount": 15
+    },
+    {
+      "id":5,
+      "amount": 5
+    },
+    {
+      "id":6,
+      "amount": 25
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title":"Blusa feminina básica texturizada manga",
+      "price": 39.90,
+      "image": "https://cea.vteximg.com.br/arquivos/ids/11847051-400-400/Blusa-Feminina-Basica-Texturizada-Manga-Bufante-Decote-Redondo-Preta-9856461-Preto_1.jpg?v=637166961320470000"
+    },
+    {
+      "id": 2,
+      "title": "Suéter feminino em tricó chenille decote v",
+      "price": 89.99,
+      "image": "https://cea.vteximg.com.br/arquivos/ids/11847079-400-400/Sueter-Feminino-em-Trico-Chenille-Decote-V-Verde-Militar-9811695-Verde_Militar_1.jpg?v=637166961474530000"
+    },
+    {
+      "id": 3,
+      "title": "Vestido feminino midi estampado de poá",
+      "price": 119.99,
+      "image": "https://cea.vteximg.com.br/arquivos/ids/12219946-400-400/Vestido-Feminino-Midi-Estampado-de-Poa-Manga-Curta-Off-White-9918306-Off_White_1.jpg?v=637185159264000000"
+    },
+    {
+      "id": 4,
+      "title": "Calça jeans feminina mom cintura super alta",
+      "price": 89.90,
+      "image": "https://cea.vteximg.com.br/arquivos/ids/12440088-400-400/Calca-Jeans-Feminina-Mom-Cintura-Super-Alta-Azul-Escuro-9204361-Azul_Escuro_1.jpg?v=637194390410900000"
+    },
+    {
+      "id": 5,
+      "title": "Camiseta masculina slim fit manga curta",
+      "price": 19.90,
+      "image": "https://cea.vteximg.com.br/arquivos/ids/11236779-400-400/Camiseta-Masculina-Slim-Fit-Manga-Curta-Gola-Portuguesa-Rosa-Claro-9806201-Rosa_Claro_1.jpg?v=637127234367500000"
+    },
+    {
+      "id": 6,
+      "title": "Macaquinho feminino triya estampado étnico alças finas branco",
+      "price": 39.99,
+      "image": "https://cea.vteximg.com.br/arquivos/ids/10771132-463-556/Macaquinho-Feminino-Triya-Estampado-Etnico-Alcas-Finas-Branco-9679222-Branco_2.jpg?v=637079752158100000"
+    }
+  ]
+}
