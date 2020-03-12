@@ -1,5 +1,5 @@
 <html>
-  <h1>EMODA</h1>
+  <h1><img src="./src/assets/images/logo.png" alt="Logo do projeto" /></h1>
 
 <p>Este é um projeto que representa uma loja virtual, simulando um carrinho de compra
 projeto criado em ReactJS.</p>
