@@ -14,7 +14,7 @@ function* addToCart({ id }) {
   const stockAmount = stock.data.amount;
   const currencyAmount = productExist ? productExist.amount + 1 : 0;
 
-  const amount = currencyAmount + 1;
+  const amount = currencyAmount;
 
   if (amount > stockAmount) {
     toast.error('Quantidade solicitada insuficiente no estoque!');
