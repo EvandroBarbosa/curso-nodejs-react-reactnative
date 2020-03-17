@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 function App() {
   // Usagem do Hook useState!!!
@@ -20,10 +20,14 @@ function App() {
     localStorage.setItem('tech', JSON.stringify(tech));
   }, [tech]);
 
-  function handleAdd() {
+  // Usage do Hook useMemo
+  const techSize = useMemo(() => tech.length, [tech]);
+
+  // Usage do Hook useCallback
+  const handleAdd = useCallback(() => {
     setTech([...tech, newTech]);
     setNewTech('');
-  }
+  }, [newTech, tech]);
 
   return (
     <>
@@ -32,6 +36,8 @@ function App() {
           <li key={t}>{t}</li>
         ))}
       </ul>
+      <strong>Você tem {techSize} tecnologias</strong>
+      <br />
       <input
         type="text"
         value={newTech}
