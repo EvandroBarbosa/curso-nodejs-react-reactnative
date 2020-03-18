@@ -18,6 +18,9 @@ import path from 'path';
 // Carrega o modulo do sentry
 import * as Sentry from '@sentry/node';
 
+// Adicionando o modulo de cors
+import cors from 'cors';
+
 // Carrega o arquivo de rotas
 import routes from './routes';
 
@@ -47,6 +50,7 @@ class App {
 
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
+    this.server.use(cors());
     this.server.use(express.json());
     this.server.use(
       '/files',
