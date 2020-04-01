@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { Router } from 'react-router-dom';
-
-import GlobalStyles from './styles/global';
-
-import './config/Reactotron';
+import './config/ReactotronConfig';
 
 import Routes from './routes';
 import history from './services/history';
+
+
+import GlobalStyles from './styles/global';
 
 function App() {
   return (

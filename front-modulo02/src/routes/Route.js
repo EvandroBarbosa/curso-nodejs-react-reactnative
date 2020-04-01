@@ -7,7 +7,7 @@ import DefaultLayout from '~/pages/_layout/default';
 
 export default function RouteWrapper({
   component: Component,
-  isPrivate = false,
+  isPrivate,
   ...rest
 }) {
   const signed = false;

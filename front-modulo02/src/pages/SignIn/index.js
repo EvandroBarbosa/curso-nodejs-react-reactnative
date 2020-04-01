@@ -14,7 +14,8 @@ const schema = Yup.object().shape({
 });
 
 export default function SignIn() {
-  function handleSubmit(data) {}
+  function handleSubmit() {}
+
   return (
     <>
       <img src={logo} alt="logo gobarber" />
