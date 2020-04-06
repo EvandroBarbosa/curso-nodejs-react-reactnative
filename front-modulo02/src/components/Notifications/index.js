@@ -18,7 +18,8 @@ export default function Notifications() {
   const [notifications, setNotifications] = useState([]);
 
   const hasUnread = useMemo(
-    () => !!notifications.find(notification => notification.read === false)
+    () => !!notifications.find(notification => notification.read === false),
+    [notifications]
   );
 
   useEffect(() => {
