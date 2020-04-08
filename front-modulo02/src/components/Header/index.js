@@ -25,7 +25,7 @@ export default function Header() {
           <Profile>
             <div>
               <strong>{profile.name}</strong>
-              <Link to="/profile">Meu perfil</Link>
+              <Link to="/profile">Editar perfil</Link>
             </div>
             <img
               src={
