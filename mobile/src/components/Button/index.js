@@ -1,10 +1,26 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ActivityIndicator } from 'react-native';
+import PropTypes from 'prop-types';
 
-// import { Container } from './styles';
+import { Container, Text } from './styles';
 
-export default function Button() {
+export default function Button({ children, loading, ...rest }) {
   return (
-    <View />
+    <Container {...rest}>
+      {loading ? (
+        <ActivityIndicator size="small" color="#FFF" />
+      ) : (
+        <Text>{children}</Text>
+      )}
+    </Container>
   );
 }
+
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  loading: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  loading: false,
+};
