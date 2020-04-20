@@ -13,6 +13,7 @@ export function* signIn({ payload }) {
       email,
       password,
     });
+    console.tron.log('cheguei ate aqui');
 
     const { token, user } = resp.data;
 
@@ -42,7 +43,6 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
 
     // history.push('/');
