@@ -13,7 +13,6 @@ export function* signIn({ payload }) {
       email,
       password,
     });
-    console.tron.log('cheguei ate aqui');
 
     const { token, user } = resp.data;
 
